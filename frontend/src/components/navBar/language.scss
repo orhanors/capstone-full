@@ -1,0 +1,58 @@
+@import "../../style/theme.scss";
+.language-container {
+	position: relative;
+	@media screen and (max-width: 600px) {
+		display: none;
+	}
+	ul {
+		z-index: 100;
+		list-style-type: none;
+		position: absolute;
+		background-color: $dropdown-background-color;
+		color: black;
+		font-weight: 400 !important;
+
+		box-shadow: 0 0 5px rgb(155, 155, 155);
+		border-radius: 10px;
+		font-size: 14px;
+		font-weight: 300;
+		padding: 0;
+		top: 75px;
+		left: 200px;
+		transition: opacity 0.5s linear;
+
+		li {
+			z-index: 110 !important;
+			opacity: 100;
+			width: 100%;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			padding-left: 10px;
+			padding-right: 20px;
+			text-align: left;
+			height: 100%;
+
+			&:hover {
+				background-color: $hover-background-color;
+				cursor: pointer;
+
+				&:nth-of-type(1) {
+					border-top-left-radius: 10px;
+					border-top-right-radius: 10px;
+				}
+
+				&:nth-of-type(2) {
+					border-bottom-left-radius: 10px;
+					border-bottom-right-radius: 10px;
+				}
+			}
+
+			img {
+				width: 25px;
+				height: 25px;
+				margin-right: 6px;
+				pointer-events: none;
+			}
+		}
+	}
+}

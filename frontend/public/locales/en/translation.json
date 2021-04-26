@@ -1,0 +1,28 @@
+{
+	"parent": {
+		"app_name": "English App name"
+	},
+	"hello_user": "Hello, {{user}}",
+	"footer": "Demo for <1>Phrase blog</1> article.<4/>Created with React, i18next, and Bulma.",
+	"navbar": {
+		"products": "Products",
+		"about": "About",
+		"blog": "Blog",
+		"contact": "Contact"
+	},
+	"login": {
+		"title": "Create an account",
+		"signup": "Sign Up",
+		"login": "Sign in",
+		"name": "Full Name",
+		"email": "Email Address",
+		"enterPassw": "Password",
+		"password": "Create Password",
+		"password2": "Confirm Password",
+		"noAccount": "Don't have an account?",
+		"yesAccount": "Already  have an account?",
+		"warning": {
+			"required": "All fields are required"
+		}
+	}
+}

@@ -1,0 +1,29 @@
+@import "../../../style/theme.scss";
+.input-area-container {
+	label {
+		float: left;
+		margin: 0;
+		font-size: 0.8rem;
+		color: $basic-text-color;
+		font-weight: 400;
+	}
+
+	input,
+	textarea {
+		outline: none;
+		border: none;
+		width: 100%;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		padding-top: 0.7rem;
+		padding-bottom: 0.7rem;
+		border-radius: 5px;
+		font-size: 0.9rem;
+		color: $basic-text-color;
+		background-color: $input-gray;
+		border: $thin-border;
+		&:focus {
+			background-color: $input-focus;
+		}
+	}
+}

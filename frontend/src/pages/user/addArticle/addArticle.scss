@@ -1,0 +1,78 @@
+@import "../../../style/theme.scss";
+.add-article {
+	position: relative;
+
+	.loader {
+		position: absolute;
+		top: 60%;
+		left: 50%;
+		width: 100%;
+		height: 100%;
+	}
+	.title {
+		width: 100%;
+		height: 4rem;
+		font-size: xx-large;
+		outline: none;
+		border: 1px solid rgb(211, 211, 211) !important;
+		padding-left: 1rem;
+		&::placeholder {
+			color: rgb(168, 168, 168);
+			font-size: 2rem;
+		}
+	}
+
+	.publish-btn {
+		font-weight: 500;
+		font-size: 1.7rem;
+	}
+
+	.tags {
+		border: $thin-border;
+
+		width: 100%;
+		height: auto;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		background-color: #9ce2e991;
+		border: 1px solid rgb(211, 211, 211);
+
+		.tag-input {
+			border: none !important;
+			outline: none !important;
+			width: 50%;
+			padding-left: 0.3rem;
+			padding-top: 0.4rem;
+			padding-bottom: 0.4rem;
+			border-radius: 8px;
+
+			&:focus {
+				background-color: rgb(245, 245, 245);
+			}
+		}
+
+		.tag-list {
+			.tag-single-wrapper {
+				position: relative;
+
+				.tag-single {
+					padding: 0.7rem;
+					background-color: $primary-orange;
+					border-radius: 10px;
+					font-weight: 500;
+				}
+
+				.tag-close {
+					position: absolute;
+					top: -80%;
+					left: 0;
+					font-weight: 500;
+					&:hover {
+						cursor: pointer;
+						transform: scale(1.3);
+					}
+				}
+			}
+		}
+	}
+}

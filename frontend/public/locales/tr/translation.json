@@ -1,0 +1,25 @@
+{
+	"parent": {
+		"app_name": "Türkçe uygulama adı"
+	},
+	"hello_user": "Merhaba, {{user}}",
+	"footer": "Test için oluşturulmuş <1>Phrase blog</1> makalesi.<3/> React, i18next, and Bulma kullanılarak hazırlandı.",
+	"navbar": {
+		"products": "Ürünler",
+		"about": "Hakkımızda",
+		"blog": "Blog",
+		"contact": "Bize Ulaşın"
+	},
+	"login": {
+		"title": "Yeni Hesap Oluştur",
+		"signup": "Kayıt Ol",
+		"login": "Giriş Yap",
+		"name": "Ad Soyad",
+		"email": "Email Adresi",
+		"enterPassw": "Şifre",
+		"password": "Yeni Şifre",
+		"password2": "Şifreyi Onayla",
+		"noAccount": "Hesabın yok mu?",
+		"yesAccount": "Zaten hesabın var mı?"
+	}
+}

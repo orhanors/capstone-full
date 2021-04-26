@@ -1,0 +1,43 @@
+@import "../../../style/theme.scss";
+.paginate-wrapper {
+	.pagination {
+		li {
+			font-size: 1rem !important;
+			font-weight: 600;
+			padding: 0.1rem;
+
+			&:not(.selected) {
+				opacity: 1 !important;
+			}
+			a {
+				background-color: $secondary-black !important;
+				color: white !important;
+				// border: 1px solid black;
+				padding-top: 0.4rem;
+				padding-bottom: 0.4rem;
+				padding-left: 0.8rem;
+				padding-right: 0.8rem;
+			}
+		}
+
+		li.active {
+			transform: scale(1.1) !important;
+
+			a {
+				background-color: $primary-blue !important;
+			}
+		}
+
+		li {
+			&:not(.active) {
+				a {
+					opacity: 0.9;
+
+					&:hover {
+						background-color: $primary-blue !important;
+					}
+				}
+			}
+		}
+	}
+}

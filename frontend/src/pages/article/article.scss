@@ -1,0 +1,91 @@
+@import "../../style/theme.scss";
+$bg-color: white;
+$line-gray: rgb(209, 209, 209);
+
+.article-wrapper {
+	.article-content-wrapper {
+		background-color: $bg-color;
+		border-radius: 20px;
+		border: 1px solid $line-gray;
+		padding: 1rem;
+		min-height: 70vh;
+		.title {
+			font-weight: 700;
+			font-size: 2.5rem;
+		}
+		hr {
+			border: 1px solid $line-gray;
+			border-radius: 5px;
+		}
+
+		.article-tags {
+			.tag {
+				margin-right: 1rem;
+				font-weight: 500;
+				color: gray;
+				font-size: 0.8rem;
+				&:hover {
+					transition: 0.5s;
+					text-decoration: underline;
+					color: black;
+					cursor: pointer;
+				}
+
+				&:first-of-type {
+					color: white;
+					background-color: $primary-green;
+					padding: 0.3rem;
+					border-radius: 8px;
+				}
+				&::before {
+					content: "#";
+				}
+			}
+		}
+		&:hover {
+			box-shadow: $box-shadow-medium;
+		}
+		p {
+			color: rgb(104, 104, 104) !important;
+			font-size: 0.9rem;
+		}
+		img {
+			&:first-of-type {
+				width: 100%;
+				border-radius: 30px;
+			}
+		}
+		.share-icons {
+			svg {
+				margin-right: 0.7rem !important;
+				width: 2rem !important;
+				height: 2rem !important;
+			}
+			.fb {
+				svg {
+					fill: #4267b2;
+				}
+			}
+
+			.twit {
+				svg {
+					width: 2.2rem !important;
+					height: 2.2rem !important;
+					fill: #1da1f2;
+				}
+			}
+
+			.wp {
+				svg {
+					fill: #25d366;
+				}
+			}
+
+			.lnk {
+				svg {
+					fill: #0072b1;
+				}
+			}
+		}
+	}
+}

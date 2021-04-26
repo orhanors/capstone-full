@@ -1,0 +1,102 @@
+@import "../../style/theme.scss";
+.main-carousel {
+	position: relative;
+
+	#prevArrow,
+	#nextArrow {
+		color: $primary-green !important;
+	}
+	.selected {
+		.landing1,
+		.landing3 {
+			animation-name: fadeInTop;
+			animation-duration: 1s;
+			animation-fill-mode: both;
+		}
+
+		.landing2 {
+			height: 100%;
+			animation-name: fadeInBottom;
+			animation-duration: 1s;
+			animation-fill-mode: both;
+		}
+	}
+	.content-wrapper {
+		border-radius: 10px !important;
+		height: 75vh;
+		width: 100%;
+		// background: #8e9eab; /* fallback for old browsers */
+
+		img {
+			border-radius: 20px !important;
+			width: 100%;
+			height: 100%;
+			transition: 1s;
+			object-fit: cover;
+			//display: none;
+		}
+
+		.landing1,
+		.landing2,
+		.landing3 {
+			position: absolute;
+
+			.subtitle {
+				text-align: center;
+				margin-right: 10%;
+			}
+			.title {
+				width: 90%;
+			}
+		}
+
+		.landing1 {
+			top: 40%;
+			left: 3%;
+
+			button {
+				margin-right: 10%;
+			}
+		}
+
+		.landing2 {
+			top: 40%;
+			right: 0%;
+			width: 40%;
+
+			button {
+				margin-right: 10%;
+			}
+		}
+
+		.landing3 {
+			top: 40%;
+			text-align: center;
+			margin-left: 7%;
+			width: 100%;
+			button {
+				margin-right: 10%;
+			}
+		}
+	}
+}
+
+@keyframes fadeInBottom {
+	from {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeInTop {
+	from {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+	to {
+		opacity: 1;
+	}
+}

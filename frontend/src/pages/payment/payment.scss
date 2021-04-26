@@ -1,0 +1,52 @@
+@import "../../style/theme.scss";
+.payment-page-wrapper {
+	.progress {
+		background-color: inherit;
+		height: auto;
+		display: flex;
+		align-items: center;
+
+		span {
+			svg {
+				width: 2rem;
+				height: 2rem;
+			}
+		}
+
+		span.active {
+			svg {
+				fill: $primary-green;
+			}
+		}
+	}
+
+	.user-info,
+	.product-info,
+	.cart-info {
+		margin-bottom: 1rem;
+		width: 70%;
+		margin-left: 15%;
+		min-height: 50vh;
+		transition: 0.8s;
+	}
+
+	.product-info {
+		overflow-y: auto;
+	}
+
+	.btn-page {
+		button {
+			background-color: transparent !important;
+			color: $primary-black;
+			border: 1px solid $primary-black;
+			border-radius: 20px;
+			font-weight: 500;
+
+			&:hover {
+				background-color: $primary-black !important;
+				color: white;
+				transition: 0.5s;
+			}
+		}
+	}
+}

@@ -1,0 +1,67 @@
+@import "../../style/theme.scss";
+
+.add-comment-wrapper {
+	width: 60%;
+	img {
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+	}
+	.rate {
+		label {
+			i {
+				width: 3rem !important;
+				height: 3rem !important;
+				font-size: 2rem;
+			}
+		}
+	}
+	input,
+	textarea {
+		padding: 0.4rem;
+		outline: none;
+	}
+
+	input {
+		font-weight: 550;
+	}
+
+	textarea {
+		width: 85%;
+	}
+
+	.disabled {
+		&:hover {
+			cursor: not-allowed;
+		}
+
+		&::placeholder {
+			color: rgba(231, 118, 118, 0.918);
+		}
+	}
+
+	.submit-btn {
+		button {
+			background-color: $primary-orange !important;
+			color: $primary-black;
+			font-weight: 500;
+			border-radius: 20px;
+		}
+	}
+}
+
+.show-comment-wrapper {
+	img {
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+	}
+	.content {
+		background-color: rgb(230, 230, 230);
+		width: 80%;
+		padding: 1.5rem;
+		border-bottom-left-radius: 20px;
+		border-bottom-right-radius: 20px;
+		border-top-right-radius: 20px;
+	}
+}

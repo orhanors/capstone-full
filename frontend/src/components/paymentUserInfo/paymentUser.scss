@@ -1,0 +1,26 @@
+@import "../../style/theme.scss";
+.payment-user-info-container {
+	.info-card {
+		min-height: 15vh;
+		padding: 2rem;
+		background-color: white;
+		border-radius: 20px;
+		margin-bottom: 2rem;
+		border: $thin-border;
+		&:hover {
+			box-shadow: $box-shadow-medium;
+		}
+
+		.edit-icon {
+			svg {
+				width: 1.5rem;
+				height: 1.5rem;
+				fill: gray;
+				&:hover {
+					fill: $primary-orange !important;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}

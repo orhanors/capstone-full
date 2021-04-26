@@ -1,0 +1,158 @@
+@import "../../../style/theme.scss";
+.custom-radio {
+	position: absolute;
+	display: inline-block;
+	opacity: 0;
+
+	& + label {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		white-space: nowrap;
+		line-height: 1rem;
+		margin: 0 0 1.5rem 0;
+		padding: 0 0 0 1rem;
+		transition: all 0.5s ease-in-out;
+
+		span {
+			margin-left: 0.5rem;
+		}
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			color: #f5f5f5;
+			text-align: center;
+			border-radius: 0;
+			top: 0;
+			left: 0;
+			width: 1rem;
+			height: 1rem;
+			transition: all 0.5s ease-in-out;
+		}
+
+		&::before {
+			text-rendering: auto;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			line-height: 1rem;
+			border-radius: 0;
+			background-color: #ffffff;
+			color: #ffffff;
+			box-shadow: inset 0 0 0 1px #666565, inset 0 0 0 1rem #ffffff,
+				inset 0 0 0 1rem #6b0707;
+		}
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: $primary-blue;
+			font-weight: bolder;
+			transition: all 0.3s ease;
+			outline: none;
+
+			&::before {
+				color: #ffffff;
+				animation-duration: 0.5s;
+				animation-name: changeSizeAnim;
+				animation-iteration-count: infinite;
+				animation-direction: alternate;
+				box-shadow: inset 0 0 0 1px #6b0707, inset 0 0 0 16px #ffffff,
+					inset 0 0 0 16px #6b0707;
+			}
+		}
+	}
+
+	&:focus,
+	&:hover,
+	&:checked {
+		& + label {
+			color: #220000 !important;
+		}
+
+		& + label::before {
+			animation-duration: 0.3s;
+			animation-name: selectCheckboxAnim;
+			animation-iteration-count: 1;
+			animation-direction: alternate;
+			border: solid 1px $primary-blue;
+			box-shadow: inset 0 0 0 1px #bc88d4, inset 0 0 0 0 #ffffff,
+				inset 0 0 1px 2px $primary-blue;
+		}
+	}
+
+	&:checked {
+		& + label::before {
+			content: "✔";
+			background-color: $primary-blue;
+			color: #ffffff;
+			border: solid 1px $primary-green;
+			box-shadow: inset 0 0 0 1px $primary-green, inset 0 0 0 0 #ffffff,
+				inset 0 0 0 16px $primary-blue;
+		}
+	}
+
+	& + label {
+		&::before {
+			border-radius: 50%;
+		}
+	}
+
+	&[type="checkbox"] {
+		& + label {
+			&::before {
+				border-radius: 0;
+			}
+		}
+	}
+
+	@keyframes changeSizeAnim {
+		from {
+			box-shadow: 0 0 0 0 $primary-blue, inset 0 0 0 1px $primary-blue,
+				inset 0 0 0 16px #ffffff, inset 0 0 0 16px $primary-blue;
+		}
+
+		to {
+			box-shadow: 0 0 0 1px $primary-blue, inset 0 0 0 1px $primary-blue,
+				inset 0 0 0 16px #ffffff, inset 0 0 0 16px $primary-blue;
+		}
+	}
+
+	@keyframes selectCheckboxAnim {
+		0% {
+			box-shadow: 0 0 0 0 #bc88d4, inset 0 0 0 2px #ffffff,
+				inset 0 0 0 3px $primary-blue, inset 0 0 0 16px #ffffff,
+				inset 0 0 0 16px $primary-blue;
+		}
+
+		100% {
+			box-shadow: 0 0 20px 8px #eeddee, inset 0 0 0 0 white,
+				inset 0 0 0 1px #bc88d4, inset 0 0 0 0 #ffffff,
+				inset 0 0 0 16px $primary-blue;
+		}
+	}
+}
+
+.container.control-experiment {
+	background: #fee;
+
+	span,
+	input {
+		display: flex;
+		width: 2rem;
+		height: 2rem;
+		line-height: 2rem;
+		display: inline-block;
+	}
+
+	input {
+		position: absolute;
+		margin: 0;
+		padding: 0;
+	}
+
+	input[type="radio"] {
+		// display: none;
+	}
+}

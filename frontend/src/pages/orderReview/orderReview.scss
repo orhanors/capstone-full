@@ -1,0 +1,15 @@
+.order-review-wrapper {
+	position: relative;
+	.success {
+		.icon {
+			svg {
+				width: 4rem;
+				height: 4rem;
+			}
+		}
+	}
+	.confetti {
+		position: absolute;
+		left: 50%;
+	}
+}

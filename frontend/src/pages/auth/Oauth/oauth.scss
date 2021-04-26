@@ -1,0 +1,39 @@
+.open-ids {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.auth-provider {
+	font-family: system-ui, roboto, sans-serif;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 40px;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-top: 0rem;
+	padding-bottom: 0rem;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-bottom: 5%;
+	box-sizing: border-box;
+	border: 1px solid #d6d9dc;
+	text-align: center;
+	background: #fff;
+	color: #535a60;
+	span {
+		@media screen and (max-width: 395px) {
+			display: none;
+		}
+	}
+}
+
+.facebook-login {
+	color: #fff;
+	background-color: #4267b2;
+	border-color: transparent;
+}
+
+.svg-icon {
+	vertical-align: middle;
+	padding-bottom: 4px;
+}

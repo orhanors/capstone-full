@@ -1,0 +1,29 @@
+@import "../../style/theme.scss";
+.article-suggest-wrapper {
+	padding-right: 2rem !important;
+	border-radius: 10px;
+	&:hover {
+		box-shadow: $box-shadow-medium;
+		// background-color: white;
+		transition: 0.5s;
+		transform: scale(1.2);
+		border-bottom-color: $primary-green;
+	}
+	&:hover img {
+		object-fit: fill;
+	}
+
+	.details-wrapper {
+		.details {
+			.title {
+				font-size: 1rem;
+				font-weight: 500;
+			}
+		}
+	}
+	img {
+		width: 50%;
+		height: 100% !important;
+		object-fit: cover;
+	}
+}

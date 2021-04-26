@@ -1,0 +1,19 @@
+.common-carousel-wrapper {
+	margin-bottom: 10vh;
+	#prevArrow,
+	#nextArrow {
+		font-weight: 600;
+		span.styledButton {
+			background-color: #56b0b88e !important;
+			border: 3px solid #56b0b865;
+			text-align: center;
+			padding-right: 20px !important;
+			padding-left: 20px !important;
+			border-radius: 50%;
+		}
+	}
+
+	#nextArrow {
+		margin-right: 4%;
+	}
+}

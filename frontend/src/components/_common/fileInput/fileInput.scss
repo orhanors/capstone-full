@@ -1,0 +1,34 @@
+@import "../../../style/theme.scss";
+.file-input-wrapper {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	&:hover {
+		background-color: $input-focus;
+		cursor: pointer;
+	}
+	span {
+		position: absolute;
+		left: 0% !important;
+		top: 12.5% !important;
+		font-size: 5rem !important;
+		font-weight: 400;
+		color: rgba(0, 0, 0, 0.479);
+	}
+
+	small {
+		position: absolute;
+		left: 37%;
+		top: 65%;
+		font-size: 0.7rem;
+	}
+	.file-input {
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}

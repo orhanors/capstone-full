@@ -1,0 +1,23 @@
+@import "../../style/theme.scss";
+.product-info-carousel {
+	position: relative;
+	img {
+		width: 100%;
+		height: 70vh;
+		object-fit: cover;
+		transition: 0.4s;
+	}
+
+	button {
+		position: absolute;
+		border: 1px solid $primary-black;
+		bottom: 20%;
+		right: 40%;
+	}
+}
+
+li {
+	&:not(.selected) {
+		opacity: 0.3;
+	}
+}

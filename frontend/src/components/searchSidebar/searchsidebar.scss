@@ -1,0 +1,39 @@
+@import "../../style/theme.scss";
+.search-sidebar {
+	@media screen and (max-width: 450px) {
+		width: 100vw !important;
+	}
+	box-shadow: 0 0 10px #333;
+	color: $sidebar-text-color;
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	right: 0;
+	background-color: $sidebar-background-color;
+	overflow-x: hidden;
+	transition: 0.7s;
+	padding-top: 60px;
+
+	.closebtn {
+		position: absolute;
+		top: 0;
+		right: 25px;
+		font-size: 36px;
+		margin-left: 50px;
+		transition: 0.7s;
+
+		svg {
+			fill: $sidebar-return-btn-color;
+			&:hover {
+				fill: $sidebar-return-btn-hover-color;
+				transform: scale(1.2);
+			}
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}

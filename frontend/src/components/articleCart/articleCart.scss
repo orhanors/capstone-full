@@ -1,0 +1,27 @@
+@import "../../style/theme.scss";
+.article-cart-container {
+	width: 14rem !important;
+	// background-color: red;
+	min-height: 15rem !important;
+	height: auto;
+	padding-bottom: 1.2rem;
+	transition: 0.2s;
+	border-radius: 5px;
+	background-color: white;
+	img {
+		width: 100% !important;
+		object-fit: cover;
+	}
+	&:hover {
+		// transform: scale(1.05);
+		box-shadow: $box-shadow-medium;
+
+		z-index: 1000 !important;
+	}
+
+	.title {
+		color: $basic-text-color;
+		font-size: 1rem;
+		font-weight: 500;
+	}
+}

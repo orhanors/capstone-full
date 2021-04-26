@@ -1,0 +1,99 @@
+@import "../../style/theme.scss";
+.sidebar {
+	@media screen and (max-width: 450px) {
+		width: 100vw !important;
+	}
+	box-shadow: 0 0 10px #333;
+	color: $sidebar-text-color;
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	right: 0;
+	background-color: $sidebar-background-color;
+	overflow-x: hidden;
+	transition: 0.7s;
+	padding-top: 60px;
+	.products {
+		height: 60%;
+		overflow-y: scroll;
+		width: 100%;
+		padding-top: 0.6rem;
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+	.closebtn {
+		position: absolute;
+		top: 0;
+		right: 25px;
+		font-size: 36px;
+		margin-left: 50px;
+		transition: 0.7s;
+
+		svg {
+			fill: $sidebar-return-btn-color;
+			&:hover {
+				fill: $sidebar-return-btn-hover-color;
+				transform: scale(1.2);
+			}
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	.total-wrapper {
+		span {
+			font-size: 1.4rem;
+			&:last-of-type {
+				font-weight: bold;
+			}
+		}
+	}
+
+	.cart-options {
+		button {
+			font-weight: 550 !important;
+			border-radius: 20px !important;
+
+			&:hover {
+				transition: 0.5s !important;
+			}
+		}
+		.continue {
+			background-color: transparent !important;
+			color: $primary-black;
+
+			border: 1px solid $primary-orange;
+
+			&:hover {
+				background-color: $primary-orange !important;
+				color: rgb(43, 43, 43);
+			}
+		}
+
+		.pay {
+			background-color: $secondary-black !important;
+			&:not(:disabled) {
+				border: 1px solid $secondary-black;
+				&:hover {
+					color: $primary-black;
+					background-color: transparent !important;
+				}
+			}
+		}
+
+		.pay {
+			&:disabled {
+				&:hover {
+					cursor: not-allowed;
+				}
+			}
+		}
+	}
+}

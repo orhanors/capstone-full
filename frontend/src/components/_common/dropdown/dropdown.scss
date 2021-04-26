@@ -1,0 +1,51 @@
+@import "../../../style/theme.scss";
+.dropdown-wrapper {
+	position: absolute;
+	z-index: 10000;
+	top: 90%;
+	right: 40%;
+	padding: 1rem;
+	width: 14vw;
+	border-radius: 10px;
+	height: auto;
+	background-color: $dropdown-background-color;
+	box-shadow: $box-shadow-medium;
+
+	transition: 0.7s;
+	ul {
+		list-style: none;
+
+		li {
+			z-index: 10000;
+			opacity: 100;
+
+			font-size: 1rem;
+			font-weight: 400;
+			margin-bottom: 0.7rem;
+			color: $basic-text-color !important;
+			&:hover {
+				color: $primary-green !important;
+			}
+			a {
+				color: $basic-text-color !important;
+				font-size: 0.9rem;
+				&:hover {
+					color: $primary-green !important;
+				}
+			}
+		}
+	}
+
+	.triangle-up {
+		width: 0;
+		z-index: -1;
+		position: absolute;
+		top: -12px;
+		right: 0;
+
+		height: 0;
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		border-bottom: 25px solid $dropdown-background-color;
+	}
+}

@@ -1,0 +1,51 @@
+@import "../../style/theme.scss";
+.user-sidebar-container {
+	.user-sidebar {
+		margin: 0;
+		padding: 0;
+		width: 20%;
+		border-radius: 15px;
+		// position: fixed;
+		border: 1px solid rgba(128, 128, 128, 0.281);
+		box-shadow: $box-shadow-medium;
+		// position: fixed;
+
+		height: 75%;
+		overflow: auto;
+		@media screen and (max-width: 700px) {
+			width: 100%;
+			height: auto;
+			position: relative;
+		}
+
+		.user-page {
+			display: block;
+			color: black;
+			padding: 16px;
+			text-decoration: none;
+			@media screen and (max-width: 700px) {
+				float: left;
+			}
+			&:hover:not(.active) {
+				background-color: #555;
+				color: white;
+				cursor: pointer;
+			}
+		}
+
+		a.active {
+			background-color: rgb(214, 214, 214);
+			// color: white;
+		}
+	}
+
+	.content {
+		// margin-left: 200px;
+		padding: 1px 16px;
+		width: 80%;
+
+		@media screen and (max-width: 700px) {
+			margin-left: 0;
+		}
+	}
+}

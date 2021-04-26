@@ -1,0 +1,30 @@
+{
+	"compilerOptions": {
+		"target": "es2017",
+		"outDir": "build",
+		"rootDir": "src",
+		"moduleResolution": "node",
+		"module": "commonjs",
+		"declaration": false,
+		"inlineSourceMap": true,
+		"esModuleInterop": true,
+		"noFallthroughCasesInSwitch": true,
+		"traceResolution": false,
+		"listEmittedFiles": false,
+		"listFiles": false,
+
+		"pretty": true,
+		"skipLibCheck": true,
+		"lib": ["es2017"],
+		"types": ["node"],
+		"typeRoots": ["node_modules/@types", "src/types"],
+		"baseUrl": "./src",
+
+		"paths": {
+			"custom-module-type": ["types/custom-module-type"]
+		}
+	},
+	"include": ["./src/types", "src/**/*.ts"],
+	"exclude": ["node_modules/**"],
+	"compileOnSave": false
+}
