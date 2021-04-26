@@ -1,0 +1,28 @@
+# 1- Use Docker
+# 2- Build test cases (before_install)
+# 3- Run test cases (script) (-e CI=true --> this tells stop running after finis the test)
+# 4- Build all service images (after_success)
+# 5- Login to docker-cli, take images from step 4 and publish on DockerHub (after_success)
+sudo: required
+services:
+    - docker
+
+before_install:
+    - docker build -t orhanors/medicated-fe-test -f ./frontend/Dockerfile.dev ./frontend
+
+#Travis runs the codes inside test, if some of them fail (returns exit code which is non-zero) it fails,
+#otherwise it deploys
+script:
+    - docker run -e CI=true orhanors/medicated-fe-test npm test
+
+after_success:
+    - docker build -t orhanors/medicated-frontend ./frontend
+    - docker build -t orhanors/medicated-backend ./backend
+    - docker build -t orhanors/medicated-nginx ./nginx
+
+    # Log in to docker CLI
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+    # Take those images and push them to docker hub
+    - docker push orhanors/medicated-frontend
+    - docker push orhanors/medicated-backend
+    - docker push orhanors/medicated-nginx
