@@ -23,4 +23,4 @@ EXPOSE 3000
 #We're overriding default nginx configurations with our configuration
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 #W're copying all the production assets from building (previous) phase
-COPY --from=0 /app/build /usr/share/nginx/html
+COPY --from=0 /home/node/app/build /usr/share/nginx/html
