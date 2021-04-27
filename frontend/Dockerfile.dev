@@ -1,6 +1,6 @@
-FROM node:alpine
+FROM node:12-alpine
 
-RUN apk update && apk add python3.8 make g++
+#RUN apk update && apk add python3.8 make g++
 
 USER node
 
