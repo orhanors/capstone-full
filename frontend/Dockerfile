@@ -1,9 +1,9 @@
 #Production dockerfile
 #Two step, 1-build 2-run with nginx
 FROM node:15-alpine
-USER node
 
 RUN apk update && apk add python2 make g++
+USER node
 
 RUN mkdir -p /home/node/app
 
