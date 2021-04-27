@@ -1,14 +1,17 @@
 #Production dockerfile
 #Two step, 1-build 2-run with nginx
-FROM node:alpine
+FROM node:15-alpine
+USER node
+RUN mkdir -p /home/node/app
 
-WORKDIR /app
+WORKDIR /home/node/app
 
-COPY ./package*.json ./
+
+COPY --chown=node:node ./package*.json ./
 
 RUN npm i
 
-COPY . . 
+COPY --chown=node:node . . 
 
 RUN npm run build
 
