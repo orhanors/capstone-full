@@ -10,7 +10,7 @@ import createAuthRefreshInterceptor from "axios-auth-refresh";
 
 const refreshAuthLogic = (failedRequest: any) =>
 	axios({
-		url: `http://localhost:3001/api/auth/refreshToken`,
+		url: `/auth/refreshToken`,
 		withCredentials: true,
 		method: "post",
 	}).then((tokenRefreshResponse) => {
@@ -43,6 +43,7 @@ const api: Middleware = ({ dispatch }: MiddlewareAPI) => (
 	//next(action); //we can also delete this. It's for seeing the 'api' action details
 	try {
 		const response = await axios({
+			baseURL: "/api",
 			url,
 			method,
 			data,

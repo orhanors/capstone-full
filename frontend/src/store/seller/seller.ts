@@ -48,7 +48,7 @@ export default slice.reducer;
 
 export const getSellerProducts = () =>
 	apiCall({
-		url: `${process.env.REACT_APP_BE_URL}/products/seller`,
+		url: `/products/seller`,
 		onStart: requested.type,
 		onSuccess: success.type,
 		onError: failed.type,

@@ -73,7 +73,7 @@ export default productsSlice.reducer;
 
 export const addProductToCart = (productId: string, price: number) =>
 	apiCall({
-		url: `${process.env.REACT_APP_BE_URL}/cart/add`,
+		url: `/cart/add`,
 		method: "post",
 		data: { productId, price },
 		onStart: requested.type,
@@ -87,7 +87,7 @@ export const addMultipleProductToCart = (
 	qty: number
 ) =>
 	apiCall({
-		url: `${process.env.REACT_APP_BE_URL}/cart/addMultiple`,
+		url: `/cart/addMultiple`,
 		method: "post",
 		data: { productId, price, qty },
 		onStart: requested.type,
@@ -96,7 +96,7 @@ export const addMultipleProductToCart = (
 	});
 export const decreaseItemFromCart = (productId: string, price: number) =>
 	apiCall({
-		url: `${process.env.REACT_APP_BE_URL}/cart/decrease`,
+		url: `/cart/decrease`,
 		method: "post",
 		data: { productId, price },
 		onStart: requested.type,
@@ -110,7 +110,7 @@ export const removeItemFromCart = (
 	qty: number
 ) =>
 	apiCall({
-		url: `${process.env.REACT_APP_BE_URL}/cart/remove`,
+		url: `/cart/remove`,
 		method: "post",
 		data: { productId, price, qty },
 		onStart: requested.type,
@@ -120,7 +120,7 @@ export const removeItemFromCart = (
 
 export const getShoppingCart = () =>
 	apiCall({
-		url: `${process.env.REACT_APP_BE_URL}/cart/user`,
+		url: `/cart/user`,
 		onStart: requested.type,
 		onSuccess: getUserCart.type,
 		onError: failed.type,

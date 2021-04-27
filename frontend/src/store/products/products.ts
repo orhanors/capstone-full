@@ -48,7 +48,7 @@ export default productsSlice.reducer;
 
 export const getMainProducts = (currentPage: number = 1, limit: number = 8) =>
 	apiCall({
-		url: `${process.env.REACT_APP_BE_URL}/products?page=${currentPage}&limit=${limit}`,
+		url: `/products?page=${currentPage}&limit=${limit}`,
 		onStart: requested.type,
 		onSuccess: success.type,
 		onError: failed.type,

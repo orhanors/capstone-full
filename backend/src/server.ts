@@ -11,11 +11,11 @@ require("./middlewares/auth/passport");
 initialSetup(server); //Keeps initial middlewares
 errorHandling(server);
 dbConnection();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 5000;
 server.listen(port, () => {
 	if (process.env.NODE_ENV === "production") {
-		logger.info(`🚀 Server is running on CLOUD on PORT: , ${port}`);
+		logger.info(`🚀 Server is running on CLOUD on PORT:  ${port}`);
 	} else {
-		logger.info(`🚀 Server is running LOCALLY on PORT: , ${port}`);
+		logger.info(`🚀 Server is running LOCALLY on PORT:  ${port}`);
 	}
 });

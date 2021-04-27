@@ -1,7 +1,5 @@
 FROM node:alpine
 
-RUN apk update && apk add python make g++
-
 USER node
 
 RUN mkdir -p /home/node/app
@@ -9,11 +7,11 @@ RUN mkdir -p /home/node/app
 WORKDIR /home/node/app
 
 COPY --chown=node:node ./package*.json ./
-#COPY ./package*.json ./
 
 RUN npm i 
 
-COPY --chown=node:node . . 
-#COPY . . 
+COPY . . 
 
-CMD ["npm","start"]
+RUN npm run build
+
+CMD ["npm","run","start"]

@@ -67,7 +67,7 @@ export default slice.reducer;
 
 export const login = () =>
 	apiCall({
-		url: `${process.env.REACT_APP_BE_URL}/auth/login`,
+		url: `/auth/login`,
 		onStart: requested.type,
 		onSuccess: loginSuccess.type,
 		onError: failed.type,
@@ -75,7 +75,7 @@ export const login = () =>
 
 export const getUserProfile = () =>
 	apiCall({
-		url: `${process.env.REACT_APP_BE_URL}/users/me`,
+		url: `/users/me`,
 		onStart: requested.type,
 		onSuccess: profileSuccess.type,
 		onError: failed.type,
@@ -83,7 +83,7 @@ export const getUserProfile = () =>
 
 export const logout = () =>
 	apiCall({
-		url: `${process.env.REACT_APP_BE_URL}/auth/logout`,
+		url: `/auth/logout`,
 		onStart: requested.type,
 		onSuccess: logoutSuccess.type,
 		onError: failed.type,

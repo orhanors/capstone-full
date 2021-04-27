@@ -1,4 +1,4 @@
-export const port = 3001;
+export const port = 5000;
 export const mongodbUri = process.env.MONGODB_URI;
 
 export const redirectUrl = process.env.REDIRECT_URL;

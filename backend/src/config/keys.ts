@@ -1,4 +1,5 @@
-const LIVE = process.env.NODE_ENV === "production";
+//const LIVE = process.env.NODE_ENV === "production";
+const LIVE = true;
 
 if (LIVE) {
 	module.exports = require("./prod");
