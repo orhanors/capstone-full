@@ -2,6 +2,9 @@
 #Two step, 1-build 2-run with nginx
 FROM node:15-alpine
 USER node
+
+RUN apk update && apk add python2 make g++
+
 RUN mkdir -p /home/node/app
 
 WORKDIR /home/node/app
